@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 
+//https://www.youtube.com/watch?v=Q3JBvLOzL0o
+//Importar componentes
+import Navigation from './components/Navigation';
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> CH and save to reload Charles.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        
+        <Navigation titulo='Primer navegación'/>
+        
+        <Navigation titulo='Segunda navegación'/>
+         
+        
+        
     </div>
   );
 }
