@@ -1,0 +1,28 @@
+{
+
+    "product": [ {
+        "_id": "61733fe55e83a912b40d79c6",
+        "id": 8,
+        "producto": "Tablet Mac S3",
+        "precio": 2700000,
+        "estado": "Pendiente"
+    } ,
+
+    {
+        "_id": "61733fe55e83a912b40d79c6",
+        "id": 9,
+        "producto": "Tablet Mac S4",
+        "precio": 2700000,
+        "estado": "Pendiente"
+    },
+
+    {
+        "_id": "61733fe55e83a912b40d79c6",
+        "id": 10,
+        "producto": "Tablet Mac S5",
+        "precio": 2900000,
+        "estado": "Pendiente"
+    }
+    ]
+}
+
