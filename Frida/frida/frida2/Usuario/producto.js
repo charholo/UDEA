@@ -34,7 +34,8 @@ function insertNewRecord(data) {
     cell4.innerHTML = data.city;
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
+                       <a onClick="onDelete(this)">Delete</a>;
+                       <a onClick="onFormSubmit2(this)">Consultar</a>`;
                         window.alert("El registro ha sido creado con éxito");
                         console.log('Preparando envío de datos a insertar');
                         console.log(data.fullName);
@@ -52,6 +53,11 @@ function insertNewRecord(data) {
                         })
                        
 }
+
+
+
+
+function onFormSubmit2() {
 
 //Crear insertar registro 
 const url ='http://192.168.0.107:4000/api/productos/listar'
@@ -77,18 +83,28 @@ const mostrar=(data) => {
     console.log(data.productos.length)
     
     for ( let  i = 0; i < data.productos.length;i++){
-        console.log(i)
+        console.log(data)
         console.log("Entro al for")
         console.log(data.productos[i].precio)
         
         
         window.onload=function print(){}
         body +=`  <tr>
+                    <td>${data.productos[i]._id}</td>
                     <td>${data.productos[i].id}</td>
+                    <td>${data.productos[i].estado}</td>
                     <td>${data.productos[i].precio}</td>
+                    <td>${data.productos[i].produto}</td>
+
+
+                    
                     </tr>
-                
+                    
+                    <a onClick="onEdit(this)">Edite</a>
+                    <a onClick="onDelete(this)">Delete</a>;
+                  
                 ` 
+                
         console.log(body)
         
 
@@ -102,7 +118,7 @@ const mostrar=(data) => {
    
 }
 
-
+}
 
 
 
