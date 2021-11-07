@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Interfaz Usuario
+    </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body>
+<title>Habilitación Charles Holguín</title>    
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Nombre Usuario*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                        <script>
+                            {console.log("hellooo")}
+                            </script>
+                    </div>
+                    <div>
+                        <label>ID Usuario</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Rol </label>
+						
+
+  <!-- Lista de vendedores -->
+  <select name="Rol" id="Rol">
+    <option value="Administrador">Administrador</option>
+    <option value="Vendedor">Vendedor</option>
+
+
+  </select>
+           </div>     
+           <div>
+            <label>Estado </label>
+            
+
+<!-- Lista de Estado -->
+<select name="city" id="city">
+<option value="Autorizado">Autorizado</option>
+<option value="No Autorizado">No Autorizado</option>
+<option value="Pendiente">Pendiente</option>
+
+<div id = 'modalProducto'>    </div>>
+
+
+</select>
+</div>    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit" >
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>estado</th>
+                            <th>precio</th>
+                            <th>producto</th>
+                            <th>_id</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+
+    <script src="producto.js"></script>
+</body>
+
+</html>

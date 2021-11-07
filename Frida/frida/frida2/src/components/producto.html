@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<body>
+    
+    <button id = "btnPrueba"> prueba  </button> 
+    <input id = "input1" type="text" value ="50"> 
+    <div class="clase1">Caja 1</div>
+    <div class="clase1">Caja 2</div>
+
+    <script>
+        let tag = document.getElementById('btnPrueba')
+        let input1= document.getElementById('input1')
+        //console.log(tag.innerHTML)
+        console.log(input1.value)
+        
+        let class1 = document.getElementsByClassName('clase1')
+        console.log(class1[0])
+
+        class1[0].style.backgroundColor = 'blue'
+
+        console.log(document.querySelector('.clase1'))
+
+  </script>
+
+</body>

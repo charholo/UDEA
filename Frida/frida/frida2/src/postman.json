@@ -22,6 +22,13 @@
         "producto": "Tablet Mac S5",
         "precio": 2900000,
         "estado": "Pendiente"
+    },
+    {
+        "_id": "61733fe55e83a912b40d79c6",
+        "id": 11,
+        "producto": "Tablet Mac S5",
+        "precio": 2900000,
+        "estado": "Pendiente"
     }
     ]
 }

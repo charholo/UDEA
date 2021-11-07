@@ -46,8 +46,8 @@ const listarProducto = async (req,resp=response) =>{
     //                                .populate('id');
     
     resp.status(200).json({
-        ok:true,
-        msg:'Llama metodo de ListarProducto', 
+        //ok:true,
+        //msg:'Llama metodo de ListarProducto', 
         //productos
         producto
 
@@ -143,8 +143,8 @@ const listarProductoT = async (req,resp=response) =>{
                                     .populate('id');
     
     resp.status(200).json({
-        ok:true,
-        msg:'Llama metodo de ListarProductoT', 
+        //ok:true,
+        //msg:'Llama metodo de ListarProductoT', 
         //productos
         productos
 

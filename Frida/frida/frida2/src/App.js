@@ -6,6 +6,9 @@ import './App.css';
 //https://www.youtube.com/watch?v=Q3JBvLOzL0o
 //Importar componentes
 import Navigation from './components/Navigation';
+import Navigation2 from './components/Navigation2';
+
+
 import {product} from './postman.json';
 //console.log(producto);https://www.youtube.com/watch?v=BrGBlDdQwhE
 
@@ -48,7 +51,7 @@ class Formulario extends Component{
       placeholder = 'Ingresa un Email'>
     </input>
   
-    <label htmlFor='Password'> Password </label>
+    <label htmlFor='Password'> Passwordfff </label>
     <input type='Password'
       onChange={(ev)=>{this.syncChanges(ev.target.value,'password')}}
       value={this.state.password}
@@ -71,10 +74,7 @@ class Formulario extends Component{
 
 
 
-
-
-class App extends Component{
-
+class DatosCh extends Component{
   constructor(){
     super();
     this.state={
@@ -84,37 +84,98 @@ class App extends Component{
 
 
   componentDidMount(){
-    console.log('Espacio para cargar los datos de postman');
-    let promesa = fetch('http://192.168.0.107:4000/api/productos/listar/61733fe55e83a912b40d79c6');
-    promesa.then((response)=>{
-      console.log(response);
-      response.json().then((data)=>{
-        console.log(data);
-      });
+    console.log('Espacio para cargar los datos de postman 2');
+    let promesa = fetch('http://192.168.0.107:4000/api/productos/listar');
+
+    promesa.then(response=>response.json()).then(datas=>{
+      console.log("Siii")
+        
+      console.log(datas);
+      console.log("Siii");
+      
+      
+      const mostrarData = (datas) =>{
+        let body =''
+        for (let i = 0; i < datas.length;i++){
+            body +=`<tr>${datas[i].precio}</tr>`
+        }
+  
+        document.getElementById('charles').innerHTML=body 
+
+      }
 
     })
+  }
+
+  render(){
+    return (
+      
+      <div>
+      <label htmlFor='CHCH'> CHHH </label>
+
+        <table border="3">
+        <body id = 'charles'>
+       
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>Precio</th>
+        <th>Producto</th>  
+        </tr>  
+        </thead>
+        
+        </body>
+        </table>
+      </div>
+         
+      
+  )
+  }
+
+}
+//yyyyyyyy
+
+
+
+
+
+
+class App extends Component{
+
+  constructor(){
+    super();
+    this.state={
+      name:'React',
+      productos:[]
+    };
+  }  
+
+
+  componentDidMount(){
+    console.log('Espacio para cargar los datos de postman');
+    let promesa = fetch('http://192.168.0.107:4000/api/productos/listar');
+
+    promesa.then(response=>response.json()).then(data=>{
+      console.log(data);
+      console.log(data);
+
+      
+       
+
+      
+    })
+
+    
   }
 
 
   render(){
     console.log('Antes de pintar la aplciación');
-   // console.log(this.state.product);
-   // console.log(this.state.Formulario);
-
-
-   // const productos = this.state.product.map((product,i)=> {
-    //  return (
-       
-     //     product.producto,
-     //     product.estado,
-     //     product.id
-     // )
-      
-
-   //})
     
 
-
+   // console.log(this.state.product);
+   // console.log(this.state.Formulario);
+   
     return(
       <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
@@ -125,14 +186,18 @@ class App extends Component{
               
       <Formulario/>
 
-     
-    
+      <DatosCh/>      
+      
+      <Navigation2 titulo='Tercera navegación'/>
       
        
       
       
   </div>
-    );
+
+
+
+);
   }
 
 

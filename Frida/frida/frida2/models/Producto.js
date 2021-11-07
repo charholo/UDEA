@@ -23,6 +23,7 @@ const productoS = Schema({
         type:String,
         require:false
     }
+
 });
 
 module.exports=model('Producto', productoS);
