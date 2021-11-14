@@ -35,32 +35,37 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>;
-                       <a onClick="onFormSubmit2(this)">Consultar</a>`;
+                       <a onClick="onConsultar(this)">Consultar</a>;
+                       <a onClick="onInsertarP(this)">Insertar</a>`;
                         window.alert("El registro ha sido creado con éxito");
                         console.log('Preparando envío de datos a insertar');
                         console.log(data.fullName);
                         console.log(data.empCode);
                         console.log(data.Rol);
                         console.log(data.city);
+                        //.then(response=> response.json())
+                        //.then (data=>mostrar(data))
+                        //.catch(error => console.log(error))
+
+
+
 
                         //console.log(cell2);
                         //cell1.innerHTML = data.fullName; 
 
-
-                        let promesa = fetch('http://192.168.0.107:4000/api/productos/listar');
-                        promesa.then(response=>response.json()).then(data=>{
-                        console.log(data);
-                        })
                        
 }
 
 
 
 
-function onFormSubmit2() {
+
+
+
+function onConsultar() {
 
 //Crear insertar registro 
-const url ='http://192.168.0.107:4000/api/productos/listar'
+const url ='http://192.168.0.110:4000/api/productos/listar'
 const contenedor = document.querySelector('tbody');
 let resultados =''
 
@@ -94,14 +99,12 @@ const mostrar=(data) => {
                     <td>${data.productos[i].id}</td>
                     <td>${data.productos[i].estado}</td>
                     <td>${data.productos[i].precio}</td>
-                    <td>${data.productos[i].produto}</td>
-
-
-                    
-                    </tr>
-                    
+                    <td>${data.productos[i].producto}</td>
                     <a onClick="onEdit(this)">Edite</a>
                     <a onClick="onDelete(this)">Delete</a>;
+                    </tr>
+                    
+                    
                   
                 ` 
                 
@@ -119,6 +122,42 @@ const mostrar=(data) => {
 }
 
 }
+
+//Función Insertar Productos
+function onInsertarP() {
+
+    //Crear insertar registro 
+    
+    
+    const request = fetch ('http://192.168.0.110:4000/api/productos/insertar',{
+        method:'POST',
+        mode:'cors',
+        headers:{"Content-Type":"application/json"}, 
+        body: JSON.stringify({
+    
+            id:"020",
+            producto:"Computador Charles Inserta desde web :D",
+            precio:"1600000",
+            estado:"Activo"
+        })
+    })
+    request
+    .then(response=>response.json())
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err))
+       
+
+
+    }//Cierra funcion
+    
+    
+
+
+
+
+//
+
+
 
 
 

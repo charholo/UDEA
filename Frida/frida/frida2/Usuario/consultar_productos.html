@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Productos
+    </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body>
+<title>Habilitación Charles Holguín</title>    
+
+
+<style>
+    .vertical-menu {
+      width: 200px;
+      height:300px;
+    }
+    
+    .vertical-menu a {
+      background-color: #eee;
+      color: black;
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+    }
+    
+    .vertical-menu a:hover {
+      background-color: #ccc;
+    }
+    
+    .vertical-menu a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+    
+
+    
+<style>
+    .contenido {
+      width: 1000px;
+      height:100px;
+    }
+    
+    
+    .contenido a:hover {
+      background-color: #ccc;
+    }
+    
+    .contenido a.active {
+      background-color: purple;
+      color: white;
+    }
+    </style>
+
+</head>
+    <body>
+    
+
+    <ul></ul>
+    <h1>Vertical Menu</h1>
+    
+    <div class="vertical-menu">
+      <a href="#" class="active">Home</a>
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+    </div>
+
+    <ul></ul>
+
+<div class="contenido" >
+    
+
+        <table>
+                <tr>
+                    <td>
+                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                            <div>
+                                <label>Nombre Usuario*</label><label class="validation-error hide" id="fullNameValidationError">Campo requerido.</label>
+                                <input type="text" name="fullName" id="fullName">
+                                <script>
+                                    {console.log("hellooo")}
+                                    </script>
+                            </div>
+        
+                            <div>
+                                <label>ID Usuario</label>
+                                <input type="text" name="empCode" id="empCode">
+                            </div>
+        
+                            <div>
+                                <label>Rol </label>
+                                
+        
+                                <!-- Lista de vendedores -->
+                                <select name="Rol" id="Rol">
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Vendedor">Vendedor</option>
+        
+        
+                                </select>
+                   </div>     
+                   
+                   <div>
+                    <label>Estado </label>
+                    
+        
+                        <!-- Lista de Estado -->
+                        <select name="city" id="city">
+                        <option value="Autorizado">Autorizado</option>
+                        <option value="No Autorizado">No Autorizado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        
+        
+        
+        <div id = 'modalProducto'>    </div>>
+        
+        
+        </select>
+        </div>    
+        
+        
+        <input type="submit" value="Submit" >
+                         
+        
+                        </form>
+                    </td>
+                    
+                </tr>
+            </table>
+            
+        
+        
+            <td> 
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>estado</th>
+                            <th>precio</th>
+                            <th>producto</th>
+                            <th>_id</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "data">
+        
+                    </tbody>
+                </table>
+            </td>
+        
+        </div>    
+        
+
+     
+           
+
+
+
+
+
+    <script src="producto.js"></script>
+</body>
+
+</html>
