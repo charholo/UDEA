@@ -105,6 +105,7 @@ const mostrar=(data) => {
                     </tr>
                     
                     
+                    
                   
                 ` 
                 
@@ -125,27 +126,31 @@ const mostrar=(data) => {
 
 //Función Insertar Productos
 function onInsertarP() {
+    console.log("Llego al llamado de onInsertaP")
 
     //Crear insertar registro 
-    
-    
     const request = fetch ('http://192.168.0.110:4000/api/productos/insertar',{
         method:'POST',
         mode:'cors',
         headers:{"Content-Type":"application/json"}, 
         body: JSON.stringify({
     
-            id:"020",
-            producto:"Computador Charles Inserta desde web :D",
+            id:"023",
+            producto:"Charles Inserta desde Consultar_producto:D",
             precio:"1600000",
-            estado:"Activo"
+            estado:"Inactivo"
         })
     })
     request
     .then(response=>response.json())
     .then(data=>console.log(data))
     .catch(err=>console.log(err))
-       
+    //Insertar registro   
+
+    `               <a onClick="onEdit(this)">Edite</a>
+                    <a onClick="onDelete(this)">Delete</a>;
+    ` 
+               
 
 
     }//Cierra funcion

@@ -44,21 +44,29 @@ class Formulario extends Component{
   render(){
     return (
     <form>
-    <label htmlFor='Email'> Email </label>
+
+     <h1>Login habilitación Charles H</h1> <br></br>
+     <h1>   </h1>
+    <label htmlFor='Email'> Email    </label>
+    <br></br>
     <input type='Email' 
       onChange={(ev)=>{this.syncChanges(ev.target.value,'email')}}
       value={this.state.email} 
       placeholder = 'Ingresa un Email'>
     </input>
-  
-    <label htmlFor='Password'> Passwordfff </label>
+    <br></br>
+    <br></br>
+    <label htmlFor='Password'> Password </label>
+    <br></br>
     <input type='Password'
       onChange={(ev)=>{this.syncChanges(ev.target.value,'password')}}
       value={this.state.password}
       placeholder = '********'>
     </input>
-  
+   
+    
     <div>
+    <br></br>
     <input
        onClick={this.submitForm}
        type='submit'
@@ -85,7 +93,7 @@ class DatosCh extends Component{
 
   componentDidMount(){
     console.log('Espacio para cargar los datos de postman 2');
-    let promesa = fetch('http://192.168.0.107:4000/api/productos/listar');
+    let promesa = fetch('http://192.168.0.110:4000/api/productos/listar');
 
     promesa.then(response=>response.json()).then(datas=>{
       console.log("Siii")
@@ -111,7 +119,7 @@ class DatosCh extends Component{
     return (
       
       <div>
-      <label htmlFor='CHCH'> CHHH </label>
+      
 
         <table border="3">
         <body id = 'charles'>
@@ -153,7 +161,7 @@ class App extends Component{
 
   componentDidMount(){
     console.log('Espacio para cargar los datos de postman');
-    let promesa = fetch('http://192.168.0.107:4000/api/productos/listar');
+    let promesa = fetch('http://192.168.0.110:4000/api/productos/listar');
 
     promesa.then(response=>response.json()).then(data=>{
       console.log(data);
@@ -181,14 +189,13 @@ class App extends Component{
       <img src={logo} className="App-logo" alt="logo" />
       
       <Navigation titulo='Primer navegación'/>
-      
+    
       <Navigation titulo='Segunda navegación'/>
               
       <Formulario/>
 
       <DatosCh/>      
       
-      <Navigation2 titulo='Tercera navegación'/>
       
        
       

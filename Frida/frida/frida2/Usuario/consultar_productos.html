@@ -12,30 +12,6 @@
 <title>Habilitación Charles Holguín</title>    
 
 
-<style>
-    .vertical-menu {
-      width: 200px;
-      height:300px;
-    }
-    
-    .vertical-menu a {
-      background-color: #eee;
-      color: black;
-      display: block;
-      padding: 12px;
-      text-decoration: none;
-    }
-    
-    .vertical-menu a:hover {
-      background-color: #ccc;
-    }
-    
-    .vertical-menu a.active {
-      background-color: #04AA6D;
-      color: white;
-    }
-    </style>
-    
 
     
 <style>
@@ -59,18 +35,6 @@
     <body>
     
 
-    <ul></ul>
-    <h1>Vertical Menu</h1>
-    
-    <div class="vertical-menu">
-      <a href="#" class="active">Home</a>
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <a href="#">Link 4</a>
-    </div>
-
-    <ul></ul>
 
 <div class="contenido" >
     
@@ -82,6 +46,10 @@
                             <div>
                                 <label>Nombre Usuario*</label><label class="validation-error hide" id="fullNameValidationError">Campo requerido.</label>
                                 <input type="text" name="fullName" id="fullName">
+                                <input type="text" name="precio" id="precio">
+                                
+                                
+                                
                                 <script>
                                     {console.log("hellooo")}
                                     </script>
@@ -122,7 +90,7 @@
         
         </select>
         </div>    
-        
+        <a onClick="onInsertarP(this)">Insertar Registro</a>`;
         
         <input type="submit" value="Submit" >
                          
@@ -139,7 +107,7 @@
                 <table class="list" id="employeeList">
                     <thead>
                         <tr>
-                            <th>id</th>
+                            <th>idf</th>
                             <th>estado</th>
                             <th>precio</th>
                             <th>producto</th>
